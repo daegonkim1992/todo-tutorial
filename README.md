@@ -2,6 +2,23 @@
 
 [Claude Code Playbook](https://docs.claude-hunt.com) 강의의 실습용 저장소입니다. Next.js 와 shadcn/ui 로 시작하는 작은 Todo 앱을 단계별로 발전시키며 Claude Code 사용법을 익힙니다.
 
+## 프로젝트 소개
+
+브라우저에서 동작하는 Todo 앱입니다. 데이터는 서버 없이 `localStorage` 에 저장됩니다.
+
+주요 기능:
+
+- 할 일 추가 / 완료 / 삭제
+- 우선순위(높음·보통·낮음), 마감일, 카테고리(업무·개인·쇼핑) 지정
+- 상태 필터(전체·진행중·완료)와 카테고리 필터, 텍스트 검색
+- 정렬(생성일순·이름순·마감일순)
+- 다크 모드 (`d` 키로 전환)
+
+## 요구 사항
+
+- [Bun](https://bun.sh) 1.3.6 이상
+- Node.js 호환 환경 (Next.js 16 실행용)
+
 ## 관련 링크
 
 - 강의 본문: https://docs.claude-hunt.com
@@ -34,6 +51,8 @@ bun run start      # 빌드 결과 실행
 bun run lint       # ESLint
 bun run typecheck  # tsc --noEmit
 bun run format     # Prettier 포맷팅
+bun run test       # Vitest 테스트 1회 실행
+bun run test:watch # Vitest 감시 모드
 ```
 
 ## 챕터별 시작 브랜치
